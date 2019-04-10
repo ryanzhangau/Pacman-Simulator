@@ -64,9 +64,9 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='form-field-wrap'>
-          <Field type='number' label='x' value={this.state.x} update={this.update} />
-          <Field type='number' label='y' value={this.state.y} update={this.update} />
-          <Field type='text' label='f' value={this.state.f} update={this.update} />
+          <Field type='number' label='x-position' value={this.state.x} update={this.update} />
+          <Field type='number' label='y-position' value={this.state.y} update={this.update} />
+          <Field type='text' label='facing' value={this.state.f} update={this.update} />
         </div>
         <div className='button-wrap'>
           <Button label='Place' click={this.runCommand} />
