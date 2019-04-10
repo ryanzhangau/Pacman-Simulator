@@ -50,3 +50,7 @@ export const turnRight = (x, y, f) => {
   else index += 1;
   return { f: direction[index].toUpperCase(), log: `I am at (${x}, ${y}), facing ${f}` };
 };
+
+export const report = (x, y, f) => {
+  return `I am at (${x}, ${y}), facing ${f}`;
+};

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Field from './Components/Field';
 import Button from './Components/Button';
-import { place, move, turnLeft, turnRight } from './Commands';
+import { place, move, turnLeft, turnRight, report } from './Commands';
 
 class App extends Component {
   constructor(props) {
@@ -52,6 +52,7 @@ class App extends Component {
         this.setState({ f: dir.f, log: dir.log });
         break;
       case 'Report':
+        this.setState({ log: report(x, y, f) });
         break;
       default:
         this.setState({ log: 'Invlid command' });
@@ -67,12 +68,15 @@ class App extends Component {
           <Field type='number' label='y' value={this.state.y} update={this.update} />
           <Field type='text' label='f' value={this.state.f} update={this.update} />
         </div>
-        <Button label='Place' click={this.runCommand} />
-        <Button label='Move' click={this.runCommand} />
-        <Button label='Left' click={this.runCommand} />
-        <Button label='Right' click={this.runCommand} />
-        <Button label='Report' click={this.runCommand} />
-        <div>{this.state.log}</div>
+        <div className='button-wrap'>
+          <Button label='Place' click={this.runCommand} />
+          <Button label='Move' click={this.runCommand} />
+          <Button label='Left' click={this.runCommand} />
+          <Button label='Right' click={this.runCommand} />
+          <Button label='Report' click={this.runCommand} />
+        </div>
+        <h3>Result</h3>
+        <div className='result'>{this.state.log}</div>
       </div>
     );
   }
