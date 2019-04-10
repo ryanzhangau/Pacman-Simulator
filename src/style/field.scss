@@ -1,7 +1,15 @@
 .field-wrap {
   display: flex;
-  font-size: 30px;
+  font-size: 18px;
   align-items: center;
+  flex-direction: column;
+  justify-self: left;
+  label {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+  }
   input {
     border-radius: 10px;
     font-size: 20px;

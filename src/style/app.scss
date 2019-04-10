@@ -15,6 +15,7 @@ body {
 .form-field-wrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-self: flex-start;
 }
 
 .button-wrap {
