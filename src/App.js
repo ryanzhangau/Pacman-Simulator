@@ -10,7 +10,6 @@ class App extends Component {
       x: 0,
       y: 0,
       f: 'NORTH',
-      placed: false,
       log: 'I am at (0, 0), facing NORTH'
     };
     this.update = this.update.bind(this);
@@ -63,9 +62,11 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Field type='number' label='x' value={this.state.x} update={this.update} />
-        <Field type='number' label='y' value={this.state.y} update={this.update} />
-        <Field type='text' label='f' value={this.state.f} update={this.update} />
+        <div className='form-field-wrap'>
+          <Field type='number' label='x' value={this.state.x} update={this.update} />
+          <Field type='number' label='y' value={this.state.y} update={this.update} />
+          <Field type='text' label='f' value={this.state.f} update={this.update} />
+        </div>
         <Button label='Place' click={this.runCommand} />
         <Button label='Move' click={this.runCommand} />
         <Button label='Left' click={this.runCommand} />
