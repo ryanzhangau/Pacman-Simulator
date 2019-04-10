@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../style/field.scss';
 
 const Field = props => {
   const { type, label, value, update } = props;

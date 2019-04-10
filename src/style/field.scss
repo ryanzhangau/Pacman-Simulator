@@ -1,0 +1,14 @@
+.field-wrap {
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  input {
+    border-radius: 10px;
+    font-size: 20px;
+    color: #666;
+    height: 40px;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+}
