@@ -1,17 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Field = props => {
-  const { label, value, update } = props;
-  // const updateVal = e => {
-  //   const { name, value } = e.target;
-  //   update(name, value);
-  // };
+  const { type, label, value, update } = props;
   return (
     <div className='field-wrap'>
       <label htmlFor={label}>{label}: </label>
-      <input type='text' id={label} name={label} value={value} onChange={update} />
+      <input type={type} id={label} name={label} value={value} onChange={update} />
     </div>
   );
+};
+
+Field.propTypes = {
+  type: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  update: PropTypes.func.isRequired
 };
 
 export default Field;
