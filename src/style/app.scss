@@ -14,3 +14,12 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
+.result {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+
+
